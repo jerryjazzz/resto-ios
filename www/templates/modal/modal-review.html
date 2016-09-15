@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <div class="content-header-review">
+      <img src="img/avatar-review-modal.png"/>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding content-review-modal">
+    <ionic-ratings ratingsobj='ratingsObject' ng-click="openModal()"></ionic-ratings>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Заголовок">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Отзыв"></textarea>
+      </label>
+    </div>
+
+    <div class="wrapper-button-modal">
+      <button class="button button-light">
+        Отправить
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>

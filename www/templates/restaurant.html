@@ -1,0 +1,79 @@
+<ion-view ng-init="getInfoAboutRestoran()">
+  <ion-nav-title>
+    <div class="page-title">{{restaurantInfo.name}}</div>
+    <div class="page-sub-title">8:00 - 10:00</div>
+  </ion-nav-title>
+  <ion-content class="tab-home-rest">
+
+    <div class="wrapper-card-home">
+      <a href="#/tab/menu">
+      <div class="img-rest-home">
+        <img src="img/menu-restoran.png"/>
+      </div>
+      <div class="rest-home-content">
+        <h3>Меню</h3>
+        <h5>Паназиатская кухня</h5>
+      </div>
+      </a>
+    </div>
+
+    <div class="wrapper-card-home">
+      <a href="#/tab/interior">
+      <div class="img-rest-home">
+        <img src="img/interior.png"/>
+      </div>
+      <div class="rest-home-content">
+        <h3>Интерьер</h3>
+        <h5>Главный зал</h5>
+      </div>
+      </a>
+    </div>
+
+    <div class="wrapper-card-home">
+      <a href="#/tab/shares">
+      <div class="img-rest-home">
+        <img src="img/shares.png"/>
+      </div>
+      <div class="rest-home-content">
+        <h3>Акции</h3>
+        <h5>Счастливые часы с 10:00 до 11:00</h5>
+      </div>
+      </a>
+    </div>
+
+    <div class="wrapper-card-home">
+      <a href="#/tab/review">
+      <div class="img-rest-home">
+        <img src="img/review.png"/>
+      </div>
+      <div class="avatar-review">
+        <div class="row">
+          <div class="col col-33">
+            <img src="img/avatar-review.png"/>
+          </div>
+          <div class="col col-75">
+            <span>Светлана</span>
+            <span class="date-review">16.07.2016</span>
+            <p class="content-review">Спасибо шеф-повару за вкуснейшие блюда. Буду теперь всегда обедать у вас! Бла-Бла-Бла!</p>
+          </div>
+        </div>
+      </div>
+      <div class="rest-home-content">
+        <h3>Отзывы<span class="review-h3"></span></h3>
+      </div>
+        </a>
+    </div>
+
+    <div class="wrapper-card-home">
+      <div id="map" data-tap-disabled="true"></div>
+    </div>
+
+    <div class="wrapper-card-home info-resto-bg">
+      <p class="content-info-resto"><span class="ion-ios-telephone"></span>+38 066 1992925</p>
+      <p class="content-info-resto"><span class="ion-ios-alarm-outline"></span>10.00 - 20.00</p>
+      <p class="content-info-resto"><span class="ion-email"></span>yapi.sumy@gmail.com</p>
+      <p class="content-info-resto"><span class="ion-ios-location"></span>г. Сумы, ул. Харьковская, 5</p>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,5 +1,29 @@
+.bar.bar-header {
+  background-color: #104e6e; }
+
+.bar.bar-stable .title {
+  color: #ffffff; }
+
+.bar-stable .button.button-clear {
+  color: #ffffff;
+  font-size: 12px; }
+
+.page-title {
+  margin-top: -10px;
+  color: #ffffff;
+  font-size: 16px; }
+
+.page-sub-title {
+  margin-top: -25px;
+  color: #ffffff;
+  font-size: 12px; }
+
+#map {
+  width: 100% !important;
+  height: 100% !important; }
+
 .registration {
-  background-image: url("/img/bg-rega.png");
+  background-image: url("../img/bg-rega.png");
   background-size: cover; }
   .registration img {
     display: block;
@@ -19,10 +43,216 @@
     margin-right: auto;
     right: 0;
     left: 0;
-    bottom: 5px;
+    bottom: 30px;
+    width: 100%;
+    height: auto; }
+    .registration .block-buttons-rega button {
+      margin: 0 auto;
+      width: 95%;
+      margin-top: 10px; }
+    .registration .block-buttons-rega .vk-outh {
+      background-color: #4d75a4;
+      color: #ffffff; }
+    .registration .block-buttons-rega .fs-outh {
+      background-color: #3c5a98;
+      color: #ffffff; }
+  .registration .block-buttons-who-are-you {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    bottom: 10px;
     width: 100%;
     height: auto;
-    background-color: #fff;
-    opacity: 0.7; }
-    .registration .block-buttons-rega h5 {
-      text-align: center; }
+    background-color: rgba(255, 255, 255, 0.7); }
+    .registration .block-buttons-who-are-you h5 {
+      text-align: center;
+      margin-bottom: 0px;
+      font-weight: normal;
+      font-size: 16px; }
+    .registration .block-buttons-who-are-you button {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 10px;
+      font-size: 14px; }
+    .registration .block-buttons-who-are-you .owner {
+      background-color: #104e6e;
+      color: #ffffff; }
+    .registration .block-buttons-who-are-you .client {
+      color: #104e6e; }
+
+.tab-home-rest .item,
+.tab-home-rest select {
+  background-color: #104e6e;
+  color: #ffffff;
+  border-top: 0; }
+
+.tab-home-rest .row {
+  padding: 0; }
+  .tab-home-rest .row .col {
+    padding: 0; }
+
+.tab-home-rest .list {
+  margin-bottom: 0; }
+
+.tab-home-rest .input-label {
+  color: #ffffff; }
+
+.tab-home-rest .kitchen,
+.tab-home-rest .price {
+  background-color: #f5f9f9;
+  color: #104e6e; }
+  .tab-home-rest .kitchen .input-label,
+  .tab-home-rest .price .input-label {
+    color: #104e6e; }
+  .tab-home-rest .kitchen select,
+  .tab-home-rest .price select {
+    background-color: #f5f9f9;
+    color: #104e6e; }
+
+.wrapper-card-home {
+  position: relative;
+  width: 100%;
+  height: 220px; }
+
+.img-rest-home img {
+  position: absolute;
+  min-width: 100%;
+  height: 220px; }
+
+.rest-home-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-left: 10px;
+  background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, black 100%);
+  background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, black 100%);
+  background: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, black 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, black 100%); }
+  .rest-home-content h3, .rest-home-content h5 {
+    color: #ffffff; }
+  .rest-home-content .review-h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff; }
+
+.avatar-review {
+  position: absolute;
+  padding: 20px;
+  width: 100%; }
+  .avatar-review img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; }
+  .avatar-review span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold; }
+  .avatar-review .date-review {
+    font-size: 12px;
+    font-weight: normal; }
+  .avatar-review .content-review {
+    color: #ffffff;
+    padding: 5px 5px 5px 0; }
+
+.info-resto-bg {
+  background-image: url("../img/circle-bg-info.png");
+  background-repeat: no-repeat;
+  background-position: 5% 5%;
+  padding: 40px; }
+  .info-resto-bg .content-info-resto {
+    font-size: 16px;
+    color: #104e6e;
+    font-weight: bold; }
+    .info-resto-bg .content-info-resto .ion-ios-telephone,
+    .info-resto-bg .content-info-resto .ion-ios-alarm-outline,
+    .info-resto-bg .content-info-resto .ion-email,
+    .info-resto-bg .content-info-resto .ion-ios-location {
+      margin-right: 10px;
+      color: #104e6e;
+      font-weight: bold; }
+
+/*menu*/
+.content-menu-img img {
+  width: 100%; }
+
+.template-review .title-review {
+  color: #3d6f89;
+  text-align: center;
+  font-weight: normal; }
+
+.template-review ul.rating li {
+  display: inline;
+  border: 0;
+  background: none;
+  padding: 5px 10px; }
+
+.template-review ul.rating li i {
+  font-size: 30px; }
+
+.template-review .ionic_ratings .icon {
+  font-size: 25px;
+  letter-spacing: 20px; }
+
+.template-review .avatar-review {
+  padding: 0;
+  margin-top: 15px;
+  position: relative; }
+  .template-review .avatar-review .name-review {
+    color: #104e6e; }
+  .template-review .avatar-review .date-review,
+  .template-review .avatar-review .content-review {
+    color: #000;
+    font-size: 12px; }
+  .template-review .avatar-review .col-50,
+  .template-review .avatar-review .rating-review-name {
+    padding-left: 0; }
+
+.template-review .star-review .ionic_ratings {
+  text-align: left; }
+  .template-review .star-review .ionic_ratings .icon {
+    font-size: 12px;
+    letter-spacing: 5px; }
+
+.modal {
+  top: 15% !important;
+  right: 5% !important;
+  bottom: 40% !important;
+  left: 5% !important;
+  overflow: visible !important;
+  min-height: 250px !important;
+  width: 90% !important; }
+  .modal .bar {
+    padding: 0; }
+
+.content-header-review {
+  width: 100%;
+  background-image: url("../img/bg-review-modal.png");
+  background-size: cover; }
+  .content-header-review img {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    margin-top: -25px; }
+
+.content-review-modal .ionic_ratings {
+  font-size: 30px;
+  letter-spacing: 10px; }
+
+.content-review-modal .wrapper-button-modal {
+  width: 100%;
+  text-align: center; }
+
+.content-review-modal .item {
+  border-width: 0 0 1px 0; }
+
+.content-review-modal textarea {
+  resize: none;
+  height: 50px; }
+
+.content-review-modal .button-light {
+  color: #104e6e; }
+
+.modal-backdrop-bg {
+  background-color: rgba(0, 0, 0, 0.8); }

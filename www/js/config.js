@@ -1,8 +1,22 @@
-restaurant.config(function($stateProvider, $urlRouterProvider) {
+restaurant.constant('ROUTES', (function() {
+    return {
+        API: 'http://restoran.returnt.ru'
+    };
+})())
+
+restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.navBar.alignTitle('center');
   $stateProvider
     .state('registration', {
       url: '/registration',
       templateUrl: 'templates/registration.html',
+      controller: 'RegistrationCtrl'
+    })
+
+    .state('who_are_you', {
+      url: '/who_are_you',
+      templateUrl: 'templates/who_are_you.html',
       controller: 'RegistrationCtrl'
     })
 
@@ -21,12 +35,52 @@ restaurant.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
-  .state('tab.search_in_play', {
-    url: '/search_in_play',
+    .state('tab.restaurant', {
+      url: '/restaurant/:id_restaurant',
+      views: {
+        'tab-map': {
+          templateUrl: 'templates/restaurant.html',
+          controller: 'restoranCtrl'
+        }
+      }
+    })
+
+    .state('tab.menu', {
+      url: '/menu',
+      views: {
+        'tab-map': {
+          templateUrl: 'templates/menu.html',
+          //controller: 'menuCtrl'
+        }
+      }
+    })
+
+    .state('tab.interior', {
+      url: '/interior',
+      views: {
+        'tab-map': {
+          templateUrl: 'templates/interior.html',
+          //controller: 'menuCtrl'
+        }
+      }
+    })
+
+    .state('tab.shares', {
+      url: '/shares',
+      views: {
+        'tab-map': {
+          templateUrl: 'templates/shares.html',
+          //controller: 'menuCtrl'
+        }
+      }
+    })
+
+  .state('tab.review', {
+    url: '/review',
     views: {
-      'tab-search_in_play': {
-        templateUrl: 'templates/tab-search_in_play.html',
-        controller: 'Search_in_playCtrl'
+      'tab-map': {
+        templateUrl: 'templates/review.html',
+        controller: 'reviewCtrl'
       }
     }
   })

@@ -1,6 +1,78 @@
 <ion-view view-title="Главная">
-  <ion-content class="padding">
-    <h2>Список ресторанов</h2>
+  <ion-content class="tab-home-rest" ng-init="getCities(); getKitchens()">
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Выбор города
+        </div>
+        <select ng-model="choiceUser.city" ng-change="displayChoiceUser()">
+          <option ng-repeat="city in cities">{{city.name}}</option>
+          <!-- <option selected>Сумы</option>
+          <option>Львов</option> -->
+        </select>
+      </label>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="list">
+          <label class="item item-input item-select kitchen">
+            <div class="input-label">
+              Кухня
+            </div>
+            <select ng-model="choiceUser.kitchen" ng-change="getRestaurants(choiceUser.kitchen, choiceUser.city)">
+              <option ng-repeat="kitchen in kitchens">{{kitchen.name}}</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="list">
+          <label class="item item-input item-select price">
+            <div class="input-label">
+              Цена
+            </div>
+            <select>
+              <option></option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
 
+  <div class="wrapper-card-home" ng-repeat="restaurant in restaurants" ng-click="selectRestaurant(restaurant.name)">
+    <a href="#/tab/restaurant/{{restaurant.id}}">
+    <div class="img-rest-home">
+      <img src="img/img-home-restoran.jpeg"/>
+    </div>
+    <div class="rest-home-content">
+      <h3>{{restaurant.name}}</h3>
+      <h5>{{restaurant.kitchen.citchen_name}}</h5>
+    </div>
+    </a>
+  </div>
+
+    <!-- <div class="wrapper-card-home">
+      <a href="#/tab/restoran">
+      <div class="img-rest-home">
+        <img src="img/img-home-restoran2.jpg"/>
+      </div>
+      <div class="rest-home-content">
+        <h3>Мясная</h3>
+        <h5>Мясная кухня</h5>
+      </div>
+      </a>
+    </div>
+
+    <div class="wrapper-card-home">
+      <a href="#/tab/restoran">
+      <div class="img-rest-home">
+        <img src="img/img-home-restoran3.jpeg"/>
+      </div>
+      <div class="rest-home-content">
+        <h3>Классик</h3>
+        <h5>Французная кухня</h5>
+      </div>
+      </a>
+    </div> -->
   </ion-content>
 </ion-view>

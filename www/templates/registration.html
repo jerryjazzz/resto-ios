@@ -1,9 +1,23 @@
 <ion-view view-title="Регистрация" hide-nav-bar="true">
-  <ion-content class="padding registration" scroll="false">
-    <img src="../img/OrTab.png"/>
+  <ion-content class="padding registration" scroll="false" ng-init="initialization()">
+    <img src="img/OrTab.png"/>
     <p class="title">Самый быстрый способ заказать столик онлайн</p>
-    <div class="block-buttons-rega">
-      <h5>Войти через:</h5>
+    <div class="block-buttons-rega" ng-show="formAuth">
+      <diw class="row">
+        <button class="button button-stable vk-outh" ng-click="logInWithVK()">
+          Войти через Вконтакте
+        </button>
+      </diw>
+      <diw class="row">
+        <button class="button button-stable fs-outh" ng-click="logInWithFacebook()">
+           Sign Up with Facebook
+        </button>
+      </diw>
+      <diw class="row">
+        <button class="button button-stable" ng-click="">
+          Sign Up with email
+        </button>
+      </diw>
     </div>
   </ion-content>
 </ion-view>
