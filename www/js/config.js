@@ -20,6 +20,12 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
       controller: 'RegistrationCtrl'
     })
 
+    .state('po_email', {
+      url: '/po_email',
+      templateUrl: 'templates/avtorizaciya_po_email.html',
+      controller: 'RegistrationCtrl'
+    })
+
     .state('tab', {
     url: '/tab',
     abstract: true,

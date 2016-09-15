@@ -45,7 +45,15 @@
     left: 0;
     bottom: 30px;
     width: 100%;
-    height: auto; }
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .registration .block-buttons-rega .title-rega {
+      color: #2a2a2a;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 0; }
+    .registration .block-buttons-rega img {
+      width: 40px; }
     .registration .block-buttons-rega button {
       margin: 0 auto;
       width: 95%;
@@ -81,6 +89,16 @@
       color: #ffffff; }
     .registration .block-buttons-who-are-you .client {
       color: #104e6e; }
+
+.po_email {
+  background-image: url("../img/avtorizaciya.png");
+  background-size: cover; }
+  .po_email .title-rega-email {
+    margin-top: 20px;
+    color: #104e6e;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0; }
 
 .tab-home-rest .item,
 .tab-home-rest select {

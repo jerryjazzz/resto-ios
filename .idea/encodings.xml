@@ -12,14 +12,13 @@
     <file url="file://$PROJECT_DIR$/www/js/controllers/HomeCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/RegistrationCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/menuCtrl.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/restoranCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/reviewCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/avtorizaciya_po_email.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/interior.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/modal/modal-review.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/registration.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/templates/restoran.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/review.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/shares.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tabs.html" charset="UTF-8" />

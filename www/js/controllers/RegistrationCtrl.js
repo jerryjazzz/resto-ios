@@ -217,4 +217,9 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
             $timeout(function() { $state.go('who_are_you'); }, 500)
         });
     };
-})
+
+  $scope.goRegEmail = function() {
+    $state.go("po_email");
+  };
+
+});
