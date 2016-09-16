@@ -8,6 +8,14 @@ restaurant.factory('CommunicationServerService', function($rootScope, ROUTES, $h
                 console.log("Login: function() --- error(function(data)", error);
             });
         },
+        LogInEmail: function(email) {
+            /*return $http.get(ROUTES.API + '/login?social=' + socialType + '&access_token=' + access_token).success(function(data) {
+                console.log("Login: function() --- success(function(data)", data);
+                return data;
+            }).error(function(error) {
+                console.log("Login: function() --- error(function(data)", error);
+            });*/
+        },
         getAccount: function(access_token) {
             return $http.get(ROUTES.API + '/account?access_token=' + access_token).success(function(data) {
                 console.log("getAccount: function() --- success(function(data)", data);
@@ -34,7 +42,7 @@ restaurant.factory('CommunicationServerService', function($rootScope, ROUTES, $h
         },
         getRestaurants: function(access_token, sity, kitchenName) {
                 console.log("access_token, sity, kitchenName", access_token, sity, kitchenName);
-            return $http.get(ROUTES.API + '/restoran?access_token='+access_token + '&where[city]='+$rootScope.choiceUser.city+'&where[citchen]='+$rootScope.choiceUser.kitchen).success(function(data) {
+            return $http.get(ROUTES.API + '/restoran?access_token='+access_token + '&where[city]='+sity+'&where[citchen]='+kitchenName).success(function(data) {
                 // console.log("getRestaurants: function() --- success(function(data)", data);
                 return data;
             }).error(function(error) {

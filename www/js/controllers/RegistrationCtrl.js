@@ -1,5 +1,4 @@
 restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $cordovaOauth, CommunicationServerService, $ionicPopup, $ionicModal, $timeout, $http) {
-
     $scope.formAuth = false;
     $scope.initialization = function() {
         $scope.showLoading();
@@ -202,24 +201,22 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
      $scope.closeModalLoginEmail = function() {
          $scope.modalLoginEmail.hide();
      };*/
+    $scope.userAuthData = {};
+    $scope.logInWithEmail = function() {
+        var mail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!(mail.test($scope.userAuthData.email))) {
+            $scope.errorEmail = true;
+        } else {
+            
+        }
+    };
 
     $scope.goToHome = function() {
         $state.go("tab.home");
     };
 
-    $scope.GreetingLogIn = function(welcomeUserName) {
-        var alertPopup = $ionicPopup.alert({
-            title: 'Успех!',
-            template: 'Приветствуем Вас, ' + welcomeUserName + ' в нашем приложении.',
-            scope: $scope
-                // buttons: [{ text: 'ОК', type: 'btn-alert-sms' }]
-        }).then(function() {
-            $timeout(function() { $state.go('who_are_you'); }, 500)
-        });
+    $scope.goRegEmail = function() {
+        $state.go("po_email");
     };
-
-  $scope.goRegEmail = function() {
-    $state.go("po_email");
-  };
 
 });

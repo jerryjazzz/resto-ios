@@ -1,16 +1,20 @@
 <ion-view hide-nav-bar="true">
   <ion-content class="padding po_email" scroll="false">
+  <button class="button button-outline" ng-click="goBack()">
+  <img src="../img/icon_back.png">
+</button>
     <p class="title-rega-email">Введите свой E-mail и нажмите OK.</p>
 
     <div class="list" style="background-color: transparent">
       <div class="item item-input-inset" style="background-color: transparent; border: 0;">
-        <label class="item-input-wrapper" style="background-color: white">
-          <input type="text" placeholder="Введите E-mail">
+        <label class="item-input-wrapper" style="background-color: white; height: 35px;">
+          <input type="email" placeholder="Введите E-mail" ng-model="userAuthData.email">
         </label>
-        <button class="button button-small" style="width: 20%">
+        <butшесton class="button button-small" style="width: 20%; height: 35px;" ng-click="logInWithEmail()">
           OK
         </button>
       </div>
+        <email-error ng-show="errorEmail"></email-error>
     </div>
   </ion-content>
 </ion-view>

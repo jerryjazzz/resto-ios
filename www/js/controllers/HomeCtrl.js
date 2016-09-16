@@ -1,6 +1,6 @@
 restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, CommunicationServerService) {
         $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
-        $rootScope.choiceUser = {};
+        $scope.choiceUser = {};
         $scope.displayChoiceUser = function(kitchenName) {
             console.log("$scope.choiceUser === ", $scope.choiceUser);
             console.log("kitchenName === ", kitchenName);
@@ -25,7 +25,7 @@ restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, Communica
     };
 
     $scope.getRestaurants = function(kitchenName, choiceUserCity) {
-            console.log("kitchenName, $scope.choiceUser.sity === ", kitchenName, choiceUserCity);
+            console.log("kitchenName, choiceUserCity === ", kitchenName, choiceUserCity);
         CommunicationServerService.getRestaurants($rootScope.userDataReservation.userToken, choiceUserCity, kitchenName).then(function(responseServerRestaurants) {
             // console.log("$scope.getRestaurants = function() === ", responseServerRestaurants);
             $scope.restaurants = responseServerRestaurants.data.data.data;
