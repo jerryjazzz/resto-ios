@@ -207,7 +207,7 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
         if (!(mail.test($scope.userAuthData.email))) {
             $scope.errorEmail = true;
         } else {
-            
+            $scope.displayDivCode = true;
         }
     };
 
@@ -219,4 +219,7 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
         $state.go("po_email");
     };
 
+    $scope.goRegTel = function() {
+        $state.go("po_tel");
+    };
 });

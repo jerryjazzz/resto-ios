@@ -26,6 +26,12 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
       controller: 'RegistrationCtrl'
     })
 
+    .state('po_tel', {
+      url: '/po_tel',
+      templateUrl: 'templates/avtorizaciya_tel.html',
+      controller: 'RegistrationCtrl'
+    })
+
     .state('tab', {
     url: '/tab',
     abstract: true,
