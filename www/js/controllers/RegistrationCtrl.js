@@ -222,4 +222,8 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
     $state.go("po_email");
   };
 
+  $scope.goRegTel = function() {
+    $state.go("po_tel");
+  };
+
 });
