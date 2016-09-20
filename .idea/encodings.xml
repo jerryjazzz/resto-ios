@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/www/css/registration.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/config.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/FavouriteCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/HistoryOrdersCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/HomeCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/RegistrationCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/menuCtrl.js" charset="UTF-8" />
@@ -16,12 +18,14 @@
     <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/avtorizaciya_po_email.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/avtorizaciya_tel.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/favourite.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/interior.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/modal/modal-review.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/registration.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/review.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/shares.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-profile.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/tabs.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/who_are_you.html" charset="UTF-8" />
   </component>

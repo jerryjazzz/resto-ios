@@ -1,4 +1,9 @@
 <ion-view view-title="Главная">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="openMoreMenu()" style="background-color: transparent; border: 0">
+      <span class="ion-ios-more" style="font-size: 30px; color: #ffffff;"></span>
+    </button>
+  </ion-nav-buttons>
   <ion-content class="tab-home-rest" ng-init="getCities(); getKitchens()">
     <div class="list">
       <label class="item item-input item-select">

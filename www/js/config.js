@@ -41,16 +41,47 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
   .state('tab.home', {
     url: '/home',
     views: {
-      'tab-map': {
+      'tab-home': {
         templateUrl: 'templates/tab-home.html',
         controller: 'HomeCtrl'
       }
     }
   })
+
+    .state('tab.history_orders', {
+      url: '/history_orders',
+      views: {
+        'tab-history_orders': {
+          templateUrl: 'templates/history_orders.html',
+          controller: 'HistoryOrdersCtrl'
+        }
+      }
+    })
+
+    .state('tab.favourite', {
+      url: '/favourite',
+      views: {
+        'tab-favourite': {
+          templateUrl: 'templates/favourite.html',
+          controller: 'FavouriteCtrl'
+        }
+      }
+    })
+
+    .state('tab.profile', {
+      url: '/profile',
+      views: {
+        'tab-profile': {
+          templateUrl: 'templates/tab-profile.html',
+          controller: 'ProfileCtrl'
+        }
+      }
+    })
+
     .state('tab.restaurant', {
       url: '/restaurant/:id_restaurant',
       views: {
-        'tab-map': {
+        'tab-home': {
           templateUrl: 'templates/restaurant.html',
           controller: 'restoranCtrl'
         }
@@ -60,7 +91,7 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
     .state('tab.menu', {
       url: '/menu',
       views: {
-        'tab-map': {
+        'tab-home': {
           templateUrl: 'templates/menu.html',
           //controller: 'menuCtrl'
         }
@@ -70,7 +101,7 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
     .state('tab.interior', {
       url: '/interior',
       views: {
-        'tab-map': {
+        'tab-home': {
           templateUrl: 'templates/interior.html',
           //controller: 'menuCtrl'
         }
@@ -80,7 +111,7 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
     .state('tab.shares', {
       url: '/shares',
       views: {
-        'tab-map': {
+        'tab-home': {
           templateUrl: 'templates/shares.html',
           //controller: 'menuCtrl'
         }
@@ -90,29 +121,9 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
   .state('tab.review', {
     url: '/review',
     views: {
-      'tab-map': {
+      'tab-home': {
         templateUrl: 'templates/review.html',
         controller: 'reviewCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-
-  .state('tab.profile', {
-    url: '/profile',
-    views: {
-      'tab-profile': {
-        templateUrl: 'templates/tab-profile.html',
-        controller: 'ProfileCtrl'
       }
     }
   });

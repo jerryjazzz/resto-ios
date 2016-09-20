@@ -1,0 +1,98 @@
+<ion-view view-title="История заказов">
+  <ion-content class="padding history_orders">
+    <ion-tabs class="tabs-positive tabs-icon-top">
+      <ion-tab title="Текущая">
+        <ion-nav-view>
+          <div class="wrapper-history-orders">
+            <div class="row">
+              <div class="col col-50">
+                <p class="title-history-order-in-orders">"Обедофф"</p>
+
+                <p class="details-history-order-in-orders" style="color: orange;"><span
+                  class="ion-ios-refresh-outline"></span>заказ на
+                  модерации</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-time-outline"></span>12-00</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-calendar-outline"></span>27.09.2016</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-person"></span>столик на 3</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-location"></span>г. Сумы, ул. Пупкина 3
+                </p>
+
+                <div class="wrapper-button-cansel-order">
+                  <button class="button button-stable" ng-click="cancelOrder()">
+                    Отменить заказ
+                  </button>
+                </div>
+              </div>
+              <div class="col col-50">
+                <img src="img/history-order-1.png"/>
+              </div>
+            </div>
+            <!--2 row img drag-->
+            <div class="row">
+              <div class="col col-50">
+                <img src="img/history-order-2.png"/>
+              </div>
+              <div class="col col-50">
+                <p class="title-history-order-in-orders">"Бургер хата"</p>
+
+                <p class="details-history-order-in-orders" style="color: green"><span
+                  class="ion-ios-refresh-outline"></span>заказ подтвержден</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-time-outline"></span>12-00</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-calendar-outline"></span>27.09.2016</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-person"></span>столик на 10</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-location"></span>г. Сумы, ул. Пупкина 33
+                </p>
+
+                <div class="wrapper-button-cansel-order">
+                  <button class="button button-stable" ng-click="cancelOrder()">
+                    Отменить заказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Прошлая">
+        <ion-nav-view>
+          <div class="wrapper-history-orders">
+            <div class="row">
+              <div class="col col-50">
+                <p class="title-history-order-in-orders">"Обедофф"</p>
+
+                <p class="details-history-order-in-orders" style="color: red;"><span
+                  class="ion-ios-refresh-outline"></span>заказ завершился</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-time-outline"></span>12-00</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-calendar-outline"></span>27.09.2016</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-person"></span>столик на 3</p>
+
+                <p class="details-history-order-in-orders"><span class="ion-ios-location"></span>г. Сумы, ул. Пупкина 3
+                </p>
+
+                <div class="wrapper-button-cansel-order">
+                  <button class="button button-stable" ng-click="cancelOrder()">
+                    Отменить заказ
+                  </button>
+                </div>
+              </div>
+              <div class="col col-50">
+                <img src="img/history-order-1.png"/>
+              </div>
+            </div>
+          </div>
+        </ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-content>
+</ion-view>
