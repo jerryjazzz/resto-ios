@@ -1,16 +1,43 @@
 <ion-view hide-nav-bar="true">
-  <ion-content class="padding po_email" scroll="false">
-    <p class="title-rega-email">Введите свой E-mail и нажмите OK.</p>
-
-    <div class="list" style="background-color: transparent">
-      <div class="item item-input-inset" style="background-color: transparent; border: 0;">
-        <label class="item-input-wrapper" style="background-color: white">
-          <input type="text" placeholder="Введите E-mail">
-        </label>
-        <button class="button button-small" style="width: 20%">
-          OK
+    <ion-content class="po_email" scroll="false">
+        <button class="button button-clear" ng-click="goBack()">
+            <img src="../img/icon_back.png">
         </button>
-      </div>
-    </div>
-  </ion-content>
+        <div class="padding" ng-hide="displayDivCode">
+            <p class="title-rega-email">Введите свой E-mail и нажмите OK.</p>
+            <div class="list" style="background-color: transparent">
+                <div class="item item-input-inset" style="background-color: transparent; border: 0;">
+                    <label class="item-input-wrapper" style="background-color: white; height: 35px;">
+                        <input type="email" placeholder="Введите E-mail" ng-model="userAuthData.email">
+                    </label>
+                    <butшесton class="button button-small" style="width: 20%; height: 35px;" ng-click="logInWithEmail()">
+                        OK
+                        </button>
+                </div>
+                <email-error ng-show="errorEmail"></email-error>
+            </div>
+        </div>
+        <div ng-show="displayDivCode">
+            <p class="title-rega-email">На Вашу электронную почту отправлен код активации.
+                <br> Введите его и нажмите OK.</p>
+            <div class="list" style="background-color: transparent">
+                <div class="item item-input-inset" style="background-color: transparent; border: 0;">
+                    <label class="item-input-wrapper" style="background-color: white; height: 35px;">
+                        <input type="number" placeholder="Введите код" ng-model="userAuthData.code">
+                    </label>
+                    <button class="button button-small" style="width: 20%; height: 35px;" ng-click="logInWithEmail()">
+                        OK
+                    </button>
+                </div>
+                <p class="title-rega-email">Не получили письмо с кодом?</p>
+                <div class="btn-again-center">
+                  <button class="button button-clear btn-again-code">
+                    Отправить письмо ещё раз!
+                </button>
+                </div>
+                
+                <!-- <email-error ng-show="errorEmail"></email-error> -->
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
