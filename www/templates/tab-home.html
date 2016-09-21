@@ -10,8 +10,8 @@
         <div class="input-label">
           Выбор города
         </div>
-        <select ng-model="choiceUser.city" ng-change="displayChoiceUser()">
-          <option ng-repeat="city in cities">{{city.name}}</option>
+        <select ng-model="choiceUser.city" ng-change="selectCity(city)">
+          <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
           <!-- <option selected>Сумы</option>
           <option>Львов</option> -->
         </select>
@@ -24,8 +24,8 @@
             <div class="input-label">
               Кухня
             </div>
-            <select ng-model="choiceUser.kitchen" ng-change="getRestaurants(choiceUser.kitchen, choiceUser.city)">
-              <option ng-repeat="kitchen in kitchens">{{kitchen.name}}</option>
+            <select ng-model="choiceUser.kitchen" ng-change="getRestaurants(choiceUser.city, choiceUser.kitchen)">
+              <option ng-repeat="kitchen in kitchens" value="{{kitchen.id}}">{{kitchen.name}}</option>
             </select>
           </label>
         </div>

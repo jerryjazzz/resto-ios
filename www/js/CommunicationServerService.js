@@ -42,7 +42,7 @@ restaurant.factory('CommunicationServerService', function($rootScope, ROUTES, $h
         },
         getRestaurants: function(access_token, sity, kitchenName) {
                 console.log("access_token, sity, kitchenName", access_token, sity, kitchenName);
-            return $http.get(ROUTES.API + '/restoran?access_token='+access_token + '&where[city]='+sity+'&where[citchen]='+kitchenName).success(function(data) {
+            return $http.get(ROUTES.API + '/restoran?access_token='+access_token + '&where[city]='+sity+'&where[kitchen]='+kitchenName).success(function(data) {
                 // console.log("getRestaurants: function() --- success(function(data)", data);
                 return data;
             }).error(function(error) {
