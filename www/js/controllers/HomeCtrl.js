@@ -1,20 +1,10 @@
-<<<<<<< HEAD
 restaurant.controller('HomeCtrl', function ($scope, $rootScope, $state, CommunicationServerService) {
   $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
-  $rootScope.choiceUser = {};
+  $scope.choiceUser = {};
   $scope.displayChoiceUser = function (kitchenName) {
     console.log("$scope.choiceUser === ", $scope.choiceUser);
     console.log("kitchenName === ", kitchenName);
   };
-=======
-restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, CommunicationServerService) {
-        $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
-        $scope.choiceUser = {};
-        $scope.displayChoiceUser = function(kitchenName) {
-            console.log("$scope.choiceUser === ", $scope.choiceUser);
-            console.log("kitchenName === ", kitchenName);
-        };
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
 
   $scope.getCities = function () {
     CommunicationServerService.getCities($rootScope.userDataReservation.userToken).then(function (responseServerCities) {
@@ -36,7 +26,6 @@ restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, Communica
     console.log("$scope.choiceUser === ", $scope.choiceUser);
   };
 
-<<<<<<< HEAD
   $scope.getRestaurants = function (kitchenName, choiceUserCity) {
     console.log("kitchenName, $scope.choiceUser.sity === ", kitchenName, choiceUserCity);
     CommunicationServerService.getRestaurants($rootScope.userDataReservation.userToken, choiceUserCity, kitchenName).then(function (responseServerRestaurants) {
@@ -47,17 +36,6 @@ restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, Communica
     });
     console.log("$scope.choiceUser === ", $scope.choiceUser);
   };
-=======
-    $scope.getRestaurants = function(kitchenName, choiceUserCity) {
-            console.log("kitchenName, choiceUserCity === ", kitchenName, choiceUserCity);
-        CommunicationServerService.getRestaurants($rootScope.userDataReservation.userToken, choiceUserCity, kitchenName).then(function(responseServerRestaurants) {
-            // console.log("$scope.getRestaurants = function() === ", responseServerRestaurants);
-            $scope.restaurants = responseServerRestaurants.data.data.data;
-            console.log("$scope.restaurants === ", $scope.restaurants);
-        }).finally(function() {});
-            console.log("$scope.choiceUser === ", $scope.choiceUser);
-    };
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
 
   $scope.selectRestaurant = function (restaurantName) {
     $rootScope.selectedRestaurant = restaurantName;

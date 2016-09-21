@@ -1,6 +1,26 @@
 <ion-view view-title="Интерьер">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="activeMenu()" style="background-color: transparent; border: 0">
+      <span class="ion-ios-more" style="font-size: 30px; color: #ffffff;"></span>
+    </button>
+  </ion-nav-buttons>
   <ion-content class="tab-home-rest">
-
+    <div class="wrapper-additional-menu" ng-show="toggle">
+      <ul class="list">
+        <li class="item" ng-click="addFavourite()">
+          <span class="ion-android-favorite-outline"></span>
+          Добавить в избранные
+        </li>
+        <li class="item" ng-click="shareFB()">
+          <span class="ion-social-facebook"></span>
+          Поделиться в Facebook
+        </li>
+        <li class="item" ng-click="shareVK()">
+          <span class="ion-social-vimeo"></span>
+          Поделиться в VK
+        </li>
+      </ul>
+    </div>
     <div class="wrapper-card-home">
       <a href="#/tab/menu">
         <div class="img-rest-home">

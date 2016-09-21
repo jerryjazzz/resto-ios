@@ -100,6 +100,11 @@
     font-weight: 600;
     margin-bottom: 0; }
 
+.btn-again-center {
+  text-align: center; }
+  .btn-again-center .btn-again-code {
+    color: #104e6e !important; }
+
 .tab-home-rest .item,
 .tab-home-rest select {
   background-color: #104e6e;
@@ -148,7 +153,8 @@
   background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, black 100%);
   background: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, black 100%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, black 100%); }
-  .rest-home-content h3, .rest-home-content h5 {
+  .rest-home-content h3,
+  .rest-home-content h5 {
     color: #ffffff; }
   .rest-home-content .review-h3 {
     font-size: 24px;
@@ -337,3 +343,12 @@
     color: #104e6e;
     float: right;
     font-size: 20px; }
+
+.wrapper-additional-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 9; }
+  .wrapper-additional-menu .item {
+    background-color: white;
+    color: #104e6e;
+    text-align: center; }
