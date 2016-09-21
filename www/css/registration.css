@@ -323,6 +323,8 @@
 .popup-container .popup .popup-head {
   background-image: url("../img/bg-review-modal.png") !important;
   background-size: cover !important; }
+  .popup-container .popup .popup-head h3 {
+    color: #ffffff; }
 
 .popup-container .popup .popup-body {
   color: #104e6e;
@@ -352,3 +354,25 @@
     background-color: white;
     color: #104e6e;
     text-align: center; }
+
+.wrapper-profile-info .add-photo {
+  display: table;
+  width: 100%;
+  height: 200px;
+  background-color: #cfcfcf;
+  background-size: cover; }
+  .wrapper-profile-info .add-photo p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #104e6e; }
+    .wrapper-profile-info .add-photo p span {
+      margin-right: 10px;
+      font-size: 18px; }
+
+.wrapper-profile-info .list .item {
+  color: #104e6e; }
+  .wrapper-profile-info .list .item .ion-edit {
+    margin-left: 10px; }

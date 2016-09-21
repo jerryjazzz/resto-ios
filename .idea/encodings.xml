@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/www/js/controllers/FavouriteCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/HistoryOrdersCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/HomeCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/ProfileCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/RegistrationCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/menuCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/reviewCtrl.js" charset="UTF-8" />

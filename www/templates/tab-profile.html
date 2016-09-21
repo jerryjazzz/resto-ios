@@ -1,5 +1,37 @@
-<ion-view view-title="Профиль">
+<ion-view view-title="Моя страница">
   <ion-content>
-
+    <div class="wrapper-profile-info">
+      <div class="add-photo">
+        <p><span class="ion-ios-plus-empty"></span>Добавить фото</p>
+      </div>
+      <ul class="list">
+        <li class="item">
+          Фамилия
+          <span class="ion-edit" ng-click="editUser()"></span>
+        </li>
+        <li class="item">
+          Имя
+          <span class="ion-edit" ng-click="editUser()"></span>
+        </li>
+        <li class="item">
+          <span class="ion-ios-email"></span>
+          E-mail
+          <span class="ion-edit" ng-click="editUser()"></span>
+        </li>
+        <li class="item">
+          <span class="ion-ios-telephone"></span>
+          Телефон
+          <span class="ion-edit" ng-click="editUser()"></span>
+        </li>
+        <li class="item">
+          <span class="ion-ios-chatboxes"></span>
+          Мои отзывы
+        </li>
+        <li class="item">
+          <span class="ion-android-favorite-outline"></span>
+          Избранные рестораны
+        </li>
+      </ul>
+    </div>
   </ion-content>
 </ion-view>
