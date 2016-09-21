@@ -1,30 +1,23 @@
-restaurant.controller('HomeCtrl', function ($scope, $rootScope, $state, CommunicationServerService) {
-  $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
-  $scope.choiceUser = {};
-  $scope.displayChoiceUser = function (kitchenName) {
-    console.log("$scope.choiceUser === ", $scope.choiceUser);
-    console.log("kitchenName === ", kitchenName);
-  };
+restaurant.controller('HomeCtrl', function($scope, $rootScope, $state, CommunicationServerService) {
+    $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
+    $scope.choiceUser = {};
+    $scope.getCities = function() {
+        CommunicationServerService.getCities($rootScope.userDataReservation.userToken).then(function(responseServerCities) {
+            // console.log("$scope.getCities === ", responseServerCities);
+            $scope.cities = responseServerCities.data.data.data;
+            console.log("$scope.cities === ", $scope.cities);
+        }).finally(function() {});
+        console.log("$scope.choiceUser === ", $scope.choiceUser);
+    };
 
-  $scope.getCities = function () {
-    CommunicationServerService.getCities($rootScope.userDataReservation.userToken).then(function (responseServerCities) {
-      // console.log("$scope.getCities === ", responseServerCities);
-      $scope.cities = responseServerCities.data.data.data;
-      console.log("$scope.cities === ", $scope.cities);
-    }).finally(function () {
-    });
-    console.log("$scope.choiceUser === ", $scope.choiceUser);
-  };
-
-  $scope.getKitchens = function (cityName) {
-    CommunicationServerService.getKitchens($rootScope.userDataReservation.userToken, cityName).then(function (responseServerKitchens) {
-      // console.log("$scope.getKitchens === ", responseServerKitchens);
-      $scope.kitchens = responseServerKitchens.data.data.data;
-      console.log("$scope.kitchens === ", $scope.kitchens);
-    }).finally(function () {
-    });
-    console.log("$scope.choiceUser === ", $scope.choiceUser);
-  };
+    $scope.getKitchens = function(cityName) {
+        CommunicationServerService.getKitchens($rootScope.userDataReservation.userToken, cityName).then(function(responseServerKitchens) {
+            // console.log("$scope.getKitchens === ", responseServerKitchens);
+            $scope.kitchens = responseServerKitchens.data.data.data;
+            console.log("$scope.kitchens === ", $scope.kitchens);
+        }).finally(function() {});
+        console.log("$scope.choiceUser === ", $scope.choiceUser);
+    };
 
   $scope.getRestaurants = function (kitchenName, choiceUserCity) {
     console.log("kitchenName, $scope.choiceUser.sity === ", kitchenName, choiceUserCity);
@@ -37,7 +30,18 @@ restaurant.controller('HomeCtrl', function ($scope, $rootScope, $state, Communic
     console.log("$scope.choiceUser === ", $scope.choiceUser);
   };
 
-  $scope.selectRestaurant = function (restaurantName) {
-    $rootScope.selectedRestaurant = restaurantName;
-  };
+    $scope.selectCity = function(city_id) {
+      // $scope.choiceUser.city = city_id;
+        console.log("$scope.choiceUser === ", $scope.choiceUser);
+    };
+
+    $scope.selectKitchen = function(kitchenName) {
+      $scope.choiceUser =
+        console.log("$scope.choiceUser === ", $scope.choiceUser);
+        console.log("kitchenName === ", kitchenName);
+    };
+
+    $scope.selectRestaurant = function(restaurantName) {
+        $rootScope.selectedRestaurant = restaurantName;
+    };
 })
