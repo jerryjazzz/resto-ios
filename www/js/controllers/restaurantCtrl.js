@@ -7,6 +7,23 @@ restaurant.controller('restaurantCtrl', function($scope, $rootScope, Communicati
         }).finally(function() {});
   };
 
+  $rootScope.toggle = false;
+  $rootScope.activeMenu = function() {
+    $rootScope.toggle = !$rootScope.toggle;
+  };
+
+  $rootScope.addFavourite = function () {
+    alert("Добавлено в избранные");
+  };
+
+  $rootScope.shareFB = function () {
+    alert("Будем делиться в ФБ");
+  };
+
+  $rootScope.shareVK = function () {
+    alert("Будем делиться в VK");
+  };
+
   var latLng = new google.maps.LatLng(55.6664507468, 37.7501590167);
   var mapOptions = {
     center: latLng,

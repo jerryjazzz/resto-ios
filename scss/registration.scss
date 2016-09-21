@@ -12,17 +12,6 @@
 }
 
 .page-title {
-<<<<<<< HEAD
-  margin-top: -10px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.page-sub-title {
-  margin-top: - 25px;
-  color: #ffffff;
-  font-size: 12px;
-=======
     margin-top: -10px;
     color: #ffffff;
     font-size: 16px;
@@ -32,7 +21,6 @@
     margin-top: - 25px;
     color: #ffffff;
     font-size: 12px;
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
 }
 
 #map {
@@ -141,30 +129,6 @@
     }
 
 .tab-home-rest {
-<<<<<<< HEAD
-  .item,
-  select {
-    background-color: #104e6e;
-    color: #ffffff;
-    border-top: 0;
-  }
-  .row {
-    padding: 0;
-    .col {
-      padding: 0;
-    }
-  }
-  .list {
-    margin-bottom: 0;
-  }
-  .input-label {
-    color: #ffffff;
-  }
-  .kitchen,
-  .price {
-    background-color: #f5f9f9;
-    color: #104e6e;
-=======
     .item,
     select {
         background-color: #104e6e;
@@ -180,7 +144,6 @@
     .list {
         margin-bottom: 0;
     }
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
     .input-label {
         color: #ffffff;
     }
@@ -205,28 +168,10 @@
 }
 
 .img-rest-home img {
-<<<<<<< HEAD
-  position: absolute;
-  min-width: 100%;
-  height: 220px;
-}
-
-.rest-home-content {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  padding-left: 10px;
-  background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
-=======
     position: absolute;
     min-width: 100%;
     height: 220px;
 }
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
-
 .rest-home-content {
     position: absolute;
     width: 100%;
@@ -248,52 +193,6 @@
 }
 
 .avatar-review {
-<<<<<<< HEAD
-  position: absolute;
-  padding: 20px;
-  width: 100%;
-
-  img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-  }
-
-  span {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .date-review {
-    font-size: 12px;
-    font-weight: normal;
-  }
-
-  .content-review {
-    color: #ffffff;
-    padding: 5px 5px 5px 0;
-  }
-}
-
-.info-resto-bg {
-  background-image: url("../img/circle-bg-info.png");
-  background-repeat: no-repeat;
-  background-position: 5% 5%;
-  padding: 40px;
-
-  .content-info-resto {
-    font-size: 16px;
-    color: #104e6e;
-    font-weight: bold;
-
-    .ion-ios-telephone,
-    .ion-ios-alarm-outline,
-    .ion-email,
-    .ion-ios-location {
-      margin-right: 10px;
-      color: #104e6e;
-      font-weight: bold;
-=======
     position: absolute;
     padding: 20px;
     width: 100%;
@@ -334,20 +233,14 @@
             color: #104e6e;
             font-weight: bold;
         }
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
     }
 }
 
 
 /*menu*/
-<<<<<<< HEAD
-.content-menu-img img {
-  width: 100%;
-=======
 
 .content-menu-img img {
     width: 100%;
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
 }
 
 .template-review {
@@ -356,16 +249,6 @@
         text-align: center;
         font-weight: normal;
     }
-<<<<<<< HEAD
-    .date-review,
-    .content-review {
-      color: #000;
-      font-size: 12px;
-    }
-    .col-50,
-    .rating-review-name {
-      padding-left: 0;
-=======
     ul.rating li {
         display: inline;
         border: 0;
@@ -374,7 +257,6 @@
     }
     ul.rating li i {
         font-size: 30px;
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
     }
     .ionic_ratings .icon {
         font-size: 25px;
@@ -407,18 +289,6 @@
 }
 
 .modal {
-<<<<<<< HEAD
-  top: 15% !important;
-  right: 5% !important;
-  bottom: 40% !important;
-  left: 5% !important;
-  overflow: visible !important;
-  min-height: 250px !important;
-  width: 90% !important;
-  .bar {
-    padding: 0;
-  }
-=======
     top: 15% !important;
     right: 5% !important;
     bottom: 40% !important;
@@ -429,7 +299,6 @@
     .bar {
         padding: 0;
     }
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
 }
 
 .content-header-review {
@@ -468,7 +337,6 @@
 .modal-backdrop-bg {
     background-color: rgba(0, 0, 0, .8);
 }
-<<<<<<< HEAD
 
 .history_orders {
   .tab-nav.tabs {
@@ -552,5 +420,14 @@
     }
   }
 }
-=======
->>>>>>> 91dc202b85cca5a1c5e0fdcd56a6e9ceb9f78b42
+
+.wrapper-additional-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  .item {
+    background-color: white;
+    color: #104e6e;
+    text-align: center
+  }
+}
