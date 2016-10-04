@@ -2,7 +2,7 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
     $scope.formAuth = false;
     $scope.initialization = function() {
         $scope.showLoading();
-        $rootScope.userDataReservation = localStorage.getItem('userDataReservation') || { userToken: undefined };
+        $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation')) || { userToken: undefined };
         console.log("$rootScope.userDataReservation", $rootScope.userDataReservation);
 
         if ($rootScope.userDataReservation != "undefined") {
@@ -189,6 +189,30 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
         $scope.hideLoading();
     };
 
+    $scope.logInWithGoogle = function() {
+        $cordovaOauth.google("35344755131-uue85rv84i1vf1g9oiqmhn991uq4sh3a.apps.googleusercontent.com", ["https://www.googleapis.com/auth/urlshortener", "https://www.googleapis.com/auth/userinfo.email"]).then(function(result) {
+            alert(JSON.stringify(result));
+            CommunicationServerService.LogInSocial('google', result.access_token).then(function(responseServerLogin) {
+                alert("LogInSocial === ", responseServerLogin);
+                if (responseServerLogin.status == 200) {
+                    // $rootScope.userDataReservation.access_token = responseServerLogin.data.access_token;
+                    CommunicationServerService.getAccount(responseServerLogin.data.access_token).then(function(responseServerAccount) {
+                        alert("getAccount === ", JSON.stringify(responseServerAccount));
+                        $rootScope.userDataReservation = responseServerAccount.data.user;
+                        localStorage.setItem('userDataReservation', JSON.stringify($rootScope.userDataReservation));
+                        $rootScope.userDataReservation = JSON.parse(localStorage.getItem('userDataReservation'));
+                    }).finally(function() { $scope.hideLoading(); });
+                    // localStorage.setItem('userDataReservation', JSON.stringify($rootScope.userDataReservation));
+                    // $state.go("who_are_you");
+                    // $scope.GreetingLogIn($scope.welcomeUserName);
+                    $state.go('who_are_you');
+                }
+            }).finally(function() { $scope.hideLoading(); });
+        }, function(error) {
+            alert(error);
+        });
+    }
+
     /* $ionicModal.fromTemplateUrl('modal/loginEmail.html', {
          scope: $scope,
          animation: 'slide-in-up'
@@ -207,8 +231,22 @@ restaurant.controller('RegistrationCtrl', function($scope, $rootScope, $state, $
         if (!(mail.test($scope.userAuthData.email))) {
             $scope.errorEmail = true;
         } else {
-            $scope.displayDivCode = true;
+            $scope.displayCodeEmail = true;
         }
+    };
+    $scope.sendAnEmailAgain = function() {
+            $scope.displayCodeEmail = false;
+    };
+
+    $scope.logInWithPhone = function() {
+        if (!$scope.userAuthData.phone) {
+            $scope.errorPhone = true;
+        } else {
+            $scope.displayCodePhone = true;
+        }
+    };
+    $scope.sendAnPhoneAgain = function() {
+            $scope.displayCodePhone = false;
     };
 
     $scope.goToHome = function() {

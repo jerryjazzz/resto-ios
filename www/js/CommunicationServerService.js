@@ -2,10 +2,10 @@ restaurant.factory('CommunicationServerService', function($rootScope, ROUTES, $h
     return {
         LogInSocial: function(socialType, access_token) {
             return $http.get(ROUTES.API + '/login?social=' + socialType + '&access_token=' + access_token).success(function(data) {
-                console.log("Login: function() --- success(function(data)", data);
+                alert("Login: function() --- success(function(data)", JSON.stringify(data));
                 return data;
             }).error(function(error) {
-                console.log("Login: function() --- error(function(data)", error);
+                alert("Login: function() --- error(function(data)", JSON.stringify(error));
             });
         },
         LogInEmail: function(email) {
@@ -40,22 +40,33 @@ restaurant.factory('CommunicationServerService', function($rootScope, ROUTES, $h
                 console.log("getKitchens: function() --- error(function(data)", error);
             });
         },
-        getRestaurants: function(access_token, sity, kitchenName) {
-                console.log("access_token, sity, kitchenName", access_token, sity, kitchenName);
-            return $http.get(ROUTES.API + '/restoran?access_token='+access_token + '&where[city]='+sity+'&where[kitchen]='+kitchenName).success(function(data) {
-                // console.log("getRestaurants: function() --- success(function(data)", data);
-                return data;
-            }).error(function(error) {
-                console.log("getRestaurants: function() --- error(function(data)", error);
-            });
+        getRestaurants: function(access_token, sity, kitchen_ID) {
+            console.log("access_token, sity, kitchen_ID", access_token, sity, kitchen_ID);
+            console.log(ROUTES.API + '/restoran?access_token=' + access_token + '&where[city]=' + sity + '&where[kitchen]=' + kitchen_ID);
+
+            if (sity && kitchen_ID) {
+                return $http.get(ROUTES.API + '/restoran?access_token=' + access_token + '&where[city]=' + sity + '&where[kitchen]=' + kitchen_ID).success(function(data) {
+                    // console.log("getRestaurants: function() --- success(function(data)", data);
+                    return data;
+                }).error(function(error) {
+                    console.log("getRestaurants: function() --- error(function(data)", error);
+                });
+            } else {
+                return $http.get(ROUTES.API + '/restoran?access_token=' + access_token + '&where[city]=' + sity).success(function(data) {
+                    // console.log("getRestaurants: function() --- success(function(data)", data);
+                    return data;
+                }).error(function(error) {
+                    console.log("getRestaurants: function() --- error(function(data)", error);
+                });
+            }
         },
-        getRestaurantInfo: function(access_token, id) {
-            return $http.get(ROUTES.API + '/restoran/?access_token=' + access_token + '&where[id]=' + id).success(function(data) {
-                console.log("getRestaurantInfo: function() --- success(function(data)", data);
-                return data;
-            }).error(function(error) {
-                console.log("getRestaurantInfo: function() --- error(function(data)", error);
-            });
+        getRestaurantInfo: function(access_token, restoran_ID) {
+            return $http.get(ROUTES.API + '/restoran?access_token=' + access_token + '&where[id]=' + restoran_ID).success(function(data) {
+                    // console.log("getRestaurants: function() --- success(function(data)", data);
+                    return data;
+                }).error(function(error) {
+                    console.log("getRestaurants: function() --- error(function(data)", error);
+                });
         }
     }
 });

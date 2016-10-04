@@ -5,7 +5,7 @@
         <div class="input-label">
           Выбор города
         </div>
-        <select ng-model="choiceUser.city" ng-change="selectCity(city)">
+        <select ng-model="choiceUser.city" ng-change="selectCity(); getRestaurants(choiceUser.city, choiceUser.kitchen)">
           <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
           <!-- <option selected>Сумы</option>
           <option>Львов</option> -->
@@ -19,7 +19,7 @@
             <div class="input-label">
               Кухня
             </div>
-            <select ng-model="choiceUser.kitchen" ng-change="getRestaurants(choiceUser.city, choiceUser.kitchen)">
+            <select ng-model="choiceUser.kitchen" ng-change="selectKitchen(); getRestaurants(choiceUser.city, choiceUser.kitchen)">
               <option ng-repeat="kitchen in kitchens" value="{{kitchen.id}}">{{kitchen.name}}</option>
             </select>
           </label>

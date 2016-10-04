@@ -79,7 +79,7 @@ restaurant.config(function($stateProvider, $urlRouterProvider,  $ionicConfigProv
     })
 
     .state('tab.restaurant', {
-      url: '/restaurant/:restaurant_id',
+      url: '/restaurant/:id_restaurant',
       views: {
         'tab-home': {
           templateUrl: 'templates/restaurant.html',

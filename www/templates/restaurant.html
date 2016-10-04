@@ -6,7 +6,7 @@
   </ion-nav-buttons>
   <ion-nav-title>
     <div class="page-title">{{restaurantInfo.name}}</div>
-    <div class="page-sub-title">8:00 - 10:00</div>
+    <div class="page-sub-title">{{restaurantInfo.working_hours}}</div>
   </ion-nav-title>
   <ion-content class="tab-home-rest">
     <div class="wrapper-additional-menu" ng-show="toggle">
@@ -91,13 +91,13 @@
     </div>
 
     <div class="wrapper-card-home info-resto-bg">
-      <p class="content-info-resto"><span class="ion-ios-telephone"></span>+38 066 1992925</p>
+      <p class="content-info-resto"><span class="ion-ios-telephone"></span>+38 {{restaurantInfo.phone}}</p>
 
-      <p class="content-info-resto"><span class="ion-ios-alarm-outline"></span>10.00 - 20.00</p>
+      <p class="content-info-resto"><span class="ion-ios-alarm-outline"></span>{{restaurantInfo.working_hours}}</p>
 
-      <p class="content-info-resto"><span class="ion-email"></span>yapi.sumy@gmail.com</p>
+      <p class="content-info-resto"><span class="ion-email"></span>{{restaurantInfo.email}}</p>
 
-      <p class="content-info-resto"><span class="ion-ios-location"></span>г. Сумы, ул. Харьковская, 5</p>
+      <p class="content-info-resto"><span class="ion-ios-location"></span>{{restaurantInfo.address}}</p>
     </div>
 
   </ion-content>

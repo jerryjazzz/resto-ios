@@ -1,26 +1,51 @@
 <ion-view hide-nav-bar="true">
-  <ion-content class="padding po_email" scroll="false">
-    <p class="title-rega-email">Выберите свою страну, введите свой номер телефона, и нажмите OK.</p>
-
-    <div class="list" style="background-color: transparent">
-      <label class="item item-input item-select" style="height: 35px;">
-        <div class="input-label">
-          &nbsp
-        </div>
-        <select style="max-width: 100%; width: 100%; direction: ltr; color: #104e6e">
-          <option>Раша ( +390 )</option>
-          <option selected>Украина ( +380 )</option>
-        </select>
-      </label>
-
-      <div class="item item-input-inset" style="background-color: transparent; border: 0;">
-        <label class="item-input-wrapper" style="background-color: white">
-          <input type="text" placeholder="Введите номер">
-        </label>
-        <button class="button button-small" style="width: 20%">
-          OK
+    <ion-content class="padding po_email" scroll="false">
+        <button class="button button-clear" ng-click="goBack()">
+            <img src="img/icon_back.png">
         </button>
-      </div>
-    </div>
-  </ion-content>
+        <div ng-hide="displayCodePhone">
+            <p class="title-rega-email">Выберите свою страну, введите свой номер телефона, и нажмите OK.</p>
+            <div class="list" style="background-color: transparent">
+                <label class="item item-input item-select" style="height: 35px;">
+                    <div class="input-label">
+                        &nbsp
+                    </div>
+                    <select style="max-width: 100%; width: 100%; direction: ltr; color: #104e6e">
+                        <option>Раша ( +390 )</option>
+                        <option selected>Украина ( +380 )</option>
+                    </select>
+                </label>
+                <div class="item item-input-inset" style="background-color: transparent; border: 0;">
+                    <label class="item-input-wrapper" style="background-color: white">
+                        <input type="number" placeholder="Введите номер" ng-model="userAuthData.phone">
+                    </label>
+                    <button class="button button-small" style="width: 20%" ng-click="logInWithPhone()">
+                        OK
+                    </button>
+                </div>
+                <phone-error ng-show="errorPhone"></phone-error>
+            </div>
+        </div>
+        <div ng-show="displayCodePhone">
+            <p class="title-rega-email">На Вашу мобильный телефон отправлен код активации.
+                <br> Введите его и нажмите OK.</p>
+            <div class="list" style="background-color: transparent">
+                <div class="item item-input-inset" style="background-color: transparent; border: 0;">
+                    <label class="item-input-wrapper" style="background-color: white; height: 35px;">
+                        <input type="number" placeholder="Введите код" ng-model="userAuthData.code">
+                    </label>
+                    <button class="button button-small" style="width: 20%; height: 35px;" ng-click="">
+                        OK
+                    </button>
+                </div>
+                <p class="title-rega-email">Не получили СМС с кодом?</p>
+                <div class="btn-again-center">
+                    <button class="button button-clear btn-again-code" ng-click="sendAnPhoneAgain()">
+                        Отправить СМС ещё раз!
+                    </button>
+                </div>
+                <!-- <email-error ng-show="errorEmail"></email-error> -->
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
